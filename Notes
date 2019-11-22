@@ -1,0 +1,46 @@
+React: Facebook proj. to develop a version of PHP that could defend against
+XSS(cross-site scripting) attacks. This ver. of PHP called XHP integrated
+XML-like language to properly escape malicious code.
+- condense entire PHP elements into single HTML-like tags
+- performance for DOM manipulation was terrible
+- decided to use creative elements of PHP into a JS library
+	a. XML-like syntax and use of tags
+- React: efficiency at updating DOM, lifecycle methods, differential algo to
+	identify what needed to be updated
+React : open source since 2013, one of the most popular like Angular.
+
+SPA - single page app, only one backend route that renders HTML. To interact
+w/ DB, utilizes async ajax requests
+
+Virtual DOM - simpler and faster abstraction of HTML DOM, can traverse and
+perform costly operations on virtual DOM prevents costly interactions w/
+the real one, only updating when it absolutely needs to
+
+Diffing Algorithm - when rendering, React creates a tree of React eles. When
+state or props update, renders tree of potentially diff. elements. This algo
+shows how to eficiently update the DOM, removing old nodes and replacing.
+HTML elements are given unique IDs so algo can tell them apart. Solves problems
+of generating fewest # of operations to re-render, O(N) time.
+
+JSX - syntactic sugar for React.createElement(component, props, ...children)
+Babel to transpile JSX into JS -> remember that JSX isn't mandatory, just makes
+life easier!
+
+Enzyme and Jest - Enzyme: testing library by Airbnb to compare React outputs,
+utilizes shallow rendering to test single components. Used with Jest: framework
+by FB for running tests on React code, similar to Jasmine (JS testing framework)
+and RSPEC.
+
+jQuery -> most popular, easier to manipulate DOM/handle events/AJAX requests.
+w/ React, just worry about updating state
+
+Vue -> new open source, big improvements in speed relative to React. Much
+smaller comunity and lacks many libraries like React.
+
+Angular -> maintained by Google, part of MEAN stack, framework not a library
+like React. MVVM (MOdel-View-ViewModel)
+
+Ember - Framework, development is slow.
+
+React Native -> React components to develop mobile apps in JS.
+----------------------------------------------------------------------------
