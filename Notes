@@ -44,3 +44,28 @@ Ember - Framework, development is slow.
 
 React Native -> React components to develop mobile apps in JS.
 ----------------------------------------------------------------------------
+NPM -> node package manager
+- configuration process for automating node module installation for apps that
+	have multiple JS dependencies
+	a. npm init -y
+	b. npm install <package_name> , e.g npm install react redux
+		- installs react and redux
+	c. inside package.json, write down dependencies
+	d. npm install
+
+- Recall diff between bundle exec some_command vs some_command, Gemfile ver. vs
+	local ver
+- add scripts for packages used, then can use npm run <package_name> to ensure
+	the package.json ver is run
+
+Webpack Config
+- .gitignore -> https://github.com/github/gitignore
+	a. usually node_modules, bundle.js, bundle.js.map are ignored
+- webpack.config.js and export a single object, inside root dir
+	a. for Rails projects, bundle.js in app/assets/javascripts
+- webpack.config.js accepts a devtool key to enable useful tools, particularly
+	source-map -> see line # in orig code when errors are raised
+- also accepts resolve key, specify what file extensions to process, remember to
+	include * to allow explicit extensions
+- https://open.appacademy.io/learn/full-stack-online/react/webpack -> Look at
+	how the sample was done!
