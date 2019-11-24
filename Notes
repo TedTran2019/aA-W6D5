@@ -69,3 +69,44 @@ Webpack Config
 	include * to allow explicit extensions
 - https://open.appacademy.io/learn/full-stack-online/react/webpack -> Look at
 	how the sample was done!
+
+ES6 Syntax: Object Destructuring
+- extract parts of object and assign to diff vars
+- works for nested properties as well
+- works on funcs/vars that returns obj
+- much easier to extract values, esp if keeping same name
+- can easily be used as parameters, takes exactly what it needs
+
+ES6: Import / Export
+- export rather than module.exports
+- can refer to by name and export all at once inside {}, or do as writing
+	by prepending export
+- to export a single obj, use export default
+- import instead of require
+	- import Etc from 'path'
+- or can do import {etc, etc} from 'path', braces only necessary w/ multiple imports
+- It's basically obj destructuring!
+- can give default unnamed exports any name when importing
+- named exports, import names must exactly match
+- to grab all exports, use import * as etc from 'path'
+- alias with as is necessary to refer to it later!
+
+React Developer Tools:
+- debugging React is hard
+- dev tools are easy to install/no setup
+- React Developer tools!
+	a. inspect component, looking at props/state
+	b. change component's state from console
+	c. compare component to HTML it generates in Elements tab
+https://github.com/facebook/react
+
+https://reactjs.org/docs/thinking-in-react.html
+Start w/ mock!
+1. Break UI into component hierarchy
+	a. draw boxes around every component/sub-component and give names
+	b. same tech for new function/obj-- single responsibility principle
+	c. arrange in hierarchy!
+2. Build static version in React
+	a. components that reuse other components/pass data using props
+		- props are a way of passing data from parent to child
+		- don't use state at all to build static version, reserved for interactivity
