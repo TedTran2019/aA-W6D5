@@ -110,3 +110,61 @@ Start w/ mock!
 	a. components that reuse other components/pass data using props
 		- props are a way of passing data from parent to child
 		- don't use state at all to build static version, reserved for interactivity
+		- top down or bottom up, big components first or small first
+			a. top-down easier for smaller projects
+			b. bottom-up easier for larger and write tests as you build
+		- bunch of reusable components with render() methods
+		- component at top of hierarchy will take data model as prop
+			a. React utilizes one-way data flow/one-way binding
+	b. two types of model data in React: props and state
+		- props is short for properties (gets passed to component)
+		- state is managed within component
+		- responsibility of component is to translate raw data into rich HTML
+		- both:
+			a. plain JS objs
+			b. trigger render update
+			c. deterministic
+		- state: if needs to alter an attribute some point in time, state!
+			- Mutation from user events!
+			- serializable representation of one point in time, a snapshot
+			- is private
+		- prop: Otherwise, prop! Config, options, immutable!
+		- component types: stateless and stateful
+		- stateless: only props
+		- stateful: both props and state, state managers, charge of client-server communication,
+			processing data, and responding to user events. Encapsulated, then put all
+			visualization/formatting logic downstream into stateless components
+3. Identify minimal but complete representation of UI state
+	- trigger changes to data model w/ state
+	- minimal set of mutable state that app needs
+	a. Is it passed in from a parent via props? If so, it probably isn’t state.
+	b. Does it remain unchanged over time? If so, it probably isn’t state.
+	c. Can you compute it based on any other state or props in your component? If so, it isn’t state.
+4. Identify where state should live
+	- which component mutates or owns the state
+	- all about one way data flow down the components hierarchy
+a. Identify every component that renders something based on that state.
+b. Find a common owner component (a single component above all the components that need the state in the hierarchy).
+c. Either the common owner or another component higher up in the hierarchy should own the state.
+d. If you can’t find a component where it makes sense to own the state, create a
+	new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
+	- decide initial state in constructor
+	- pass in components as a prop
+5. Add inverse data flow
+	-	support data flowing from other way, components deep in hierarchy updates
+		ones higher up
+	- usage of callbacks that will fire whenever state should be update, onChange
+		event on inputs
+https://reactjs.org/docs/hooks-intro.html
+- Hooks, new feature of React 16.8!
+----------------------------------------------------------------------
+- NOT MVC, just V.
+- updating DOM typically bottleneck, deciding which part to update is pain,
+	never decide what/how to re-render
+- component -> JS functiosnt hat return HTML -> single responsibility principle
+
+Component: props, state, and JSX
+	- inherit from React.Component, needs React module
+	- props: attribs from parent components w/ no mutation
+	- state: mutable ata that affecs rendered output, changes, owned by component,
+		initial value in constructor
