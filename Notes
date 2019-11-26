@@ -168,3 +168,5 @@ Component: props, state, and JSX
 	- props: attribs from parent components w/ no mutation
 	- state: mutable ata that affecs rendered output, changes, owned by component,
 		initial value in constructor
+
+-----
