@@ -169,4 +169,3 @@ Component: props, state, and JSX
 	- state: mutable ata that affecs rendered output, changes, owned by component,
 		initial value in constructor
 
------
