@@ -169,3 +169,35 @@ Component: props, state, and JSX
 	- state: mutable ata that affecs rendered output, changes, owned by component,
 		initial value in constructor
 
+Ex.
+- import React from 'react';
+- class Etc extends React.Component
+- constructor() {
+		super();
+	}
+- export default Etc
+
+	- render function: describes at any moment in time what compnoent should look like
+	- function in mathematical sense of props/state
+	- never explicitly called
+	- changes to prop/state induce a render
+	- utilizes JSX -> {} for interpolation instead of .erb <% %>
+	- #setState method? -> invoke this!
+	- return a single React element, each single can have any # of descendants
+	- handler set by passing prop: e.g onClick
+	- value is pointer to handler function
+	- event obj contains usual things, usually want to utilize #preventDefault
+	- wait DOM has loaded so have target to render into, ReactDOM.render -> replace entire
+		content of trget HTML element
+	- need to import react and react-dom
+	- Look at how to render using ReactDom.render w/ args
+
+Transpilation: Browsers can't understand JSX, mus b transpiled into raw JS
+- Utilizes Babel: babel-core, babel-preset-react, babel-preset-es2015, babel-loader
+- preset Babel in webpack config, runs files ending w/ .jsx thru Babel loader
+	- remember npm install --save (to update package.json)
+- always git ignore node modules and the bundle.js
+- devtool 'source-map' -> can look code as we write it in dev tools
+
+React: Functional Components
+-
