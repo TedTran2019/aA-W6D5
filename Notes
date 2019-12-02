@@ -200,4 +200,31 @@ Transpilation: Browsers can't understand JSX, mus b transpiled into raw JS
 - devtool 'source-map' -> can look code as we write it in dev tools
 
 React: Functional Components
--
+- https://reactjs.org/docs/hooks-intro.html soon?
+- Can make a class or a function, as long as it takes in props and returns
+	HTML
+- if class with only render function, make a single function instead
+- if creating lots of lis, give each a key
+
+React: Lifecycle Methods
+- componentWillMount, ...DidMount, ..WillReceiveProps, ...WillUpdate, ...DidUpdate,
+	...WillUnmount -> occur and invoked by React, not invoked ourselves. Can place
+	debugger within can see all lifecycle methods in React docs
+- bind this in constructor if use more than once
+
+React Components: this.props and this.state
+1. props: passed in time of initialization, accessible in instance methods
+	- never change props
+2. state: properties that can be altered by component itself
+	- use to keep track of mutable internal data
+	- if never goign to change or used across entire app, use props instead
+	- can reset own state at certain points in lifecycle using this.setState()
+	- always use setState because doing this.state = doesn't update component
+	- never call setState during a render or infinite loop
+	- setState is async, cannot rely on value for calc next state
+	- setState takes a callback as optional second arg, doesn't run until state is
+		updated
+
+- in React, utilize className instead of class for HTMl
+- constructor is implicitly inherited, only need render method
+- remember rules for implicit returns in ES6!
