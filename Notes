@@ -228,3 +228,53 @@ React Components: this.props and this.state
 - in React, utilize className instead of class for HTMl
 - constructor is implicitly inherited, only need render method
 - remember rules for implicit returns in ES6!
+----------------------------------------------------------------------------
+Babel:
+- JS dev touches a lot of browsers w/ diff levels of compatibility
+- Babel converts all JS into vanilla ES5 compatible w/ browsers and node
+- Utilize webpack to transpile JSX + ES6 code into browser-compat JS when
+	creting a bundle
+- npm install @babel/core @babel/preset-env @babel/preset-react babel-loader
+- core is the transpiler itself, preset-env and preset-react are configs to
+	interpret ES6 and JSX
+- configure module key of webpack.config.js
+	- https://open.appacademy.io/learn/full-stack-online/react/babel
+- http://kangax.github.io/compat-table/es6/
+	- Don't need to worry about if Babel is used
+
+React:
+- JS library for creating UI components
+- manage all UI updates when any piece of app changes
+- reconcilation using virtual DOM is extremely quick!
+
+JSX:
+- like Ruby's erb, but with JS instead
+- interpolate using {}
+- http://facebook.github.io/jsx/
+
+React Components:
+- JS func return HTMl to be rendered, typically written in JSX
+- require react and react-dom
+Declaration:
+- inherit from React.Component
+- no states and no hook: utilize purely functional component
+	- common in Redux applications
+Lifecycle Methods:
+- if need to run code during various stages of lifecycle
+- https://reactjs.org/docs/react-component.html
+Synthetic Events: Event Handlers
+- React equiv. to vanilla JS #addEventListener
+- pass event listeners directly to components via props
+- https://reactjs.org/docs/events.html
+
+https://reactjs.org/docs/getting-started.html
+- modular, can gradually add
+- skip officially docs until better understanding, then learn about context,
+	refs, hooks, etc...
+-------------------------------------------------------------------------------
+Redux Lite - keep track of global state for an application
+- javascript obj for 'truth'
+- strict API for how it can be modified
+- subscription feature, other parts of app can specify a callback to be invoked
+	whenever changes are made to obj
+
