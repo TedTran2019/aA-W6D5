@@ -282,3 +282,19 @@ Dec 30th start on this again-- after more than 1 month of break and doing AoC ca
 while on said break. Went to SF for a week, spent lots of time with gf in Socal
 living together!
 Nov 22nd to Dec 30th... Jesus, I'm going to be rusty once I'm back.
+
+Okay, getting started with NPM once more. A basic documentation reading journey.
+npx webpack --display-error-details
+Homework W6D5: Setting up a basic React project
+Recall how to run scripts in webpack! npm run script_name
+npm mainly to install packages, npx to execute packages
+
+webpack
+webpack-cli
+@babel/core
+@babel/preset-env
+@babel/preset-react
+babel-loader
+react
+react-dom
+
